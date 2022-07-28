@@ -6,35 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <script src="https://kit.fontawesome.com/a91bf7e582.js" crossorigin="anonymous"></script>  
-    <link rel="stylesheet" href="style.css"> 
+
+    <link rel="stylesheet" href="style.css">             <!-- Style.css conected with index -->
+    <script src="script.js">  </script>
 </head>
 
 
 <body id="bg">
 
-      <br><br><br><br><br><br><br>
+        
+
+      
 
 
-    <div class="notes">
-     <h1>Todo</h1>
+    <div class="wrapper">
+
+
      
-
+  
      <div class="inputField">
-         <input type="text" placeholder="Add your new todo" style="height:40px; width:250px">
-         <input type="button" value="+">
+         <input type="text"  class="input" placeholder="Add your new todo" id="displayscreen" onkeyup="get()" >   <!-- Display screen for todo list  -->
+         <button onclick="set()"> + </button><!-- Add button for Todo list -->
      </div>
 
-     <ul class="todolist"> 
-         <li> task 1 <span style="background-color: brown;">   <i class="fas fa-trash"></i>   </span></li>
-         <li> task 2 <span>   <i class="fas fa-trash"></i>   </span></li>
-         <li> task 3 <span>   <i class="fas fa-trash"></i>   </span></li>
-         <li> task 4 <span>   <i class="fas fa-trash"></i>   </span></li>
+
+
+     <ul id="todolist">
+        
+         <!-- Data from function-->                                           <!-- <i class="fas fa-trash"></i> -->
+         
+         
+
      </ul>
+
+
      <div class="footer">
-         <span> ................... </span>
-         <button>Clear all</button>
+        <span> yor are <span class="penndingTask"></span> pending Task </span> 
+         <button onclick="Clearbutton()" style="cursor: pointer;" class="clearALL_Button"> Clear all </button>
      </div>
      
     </div>
+
+
+
+    
+
+
+    
 </body>
 </html>
